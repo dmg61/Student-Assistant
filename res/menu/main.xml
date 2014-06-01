@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    
+    <item android:id="@+id/inMain" 
+        android:icon="@android:drawable/ic_menu_revert"
+        android:showAsAction="ifRoom"
+        android:title="Перейти на главное меню">
+    </item>
+    
+    <item
+        android:id="@+id/autor"
+        android:icon="@android:drawable/ic_menu_help"
+        android:showAsAction="never|ifRoom"
+        android:title="О Программе"/>
+    
+    
+
+</menu>

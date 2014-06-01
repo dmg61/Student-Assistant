@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:padding="6dp"
+    android:paddingBottom="20dp" >
+
+    <Button
+        android:id="@+id/integral"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/integral"
+        android:drawableLeft="@drawable/log"
+        android:background="@drawable/button_warning_selector"
+        android:textColor="@android:color/white"
+        android:padding="10dp"
+        android:paddingTop="10dp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <Button
+        android:id="@+id/formul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_success_selector"
+        android:drawableLeft="@drawable/formul"
+        android:padding="10dp"
+        android:text="@string/formula"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <Button
+        android:id="@+id/site"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/site"
+        android:drawableLeft="@drawable/internet"
+        android:background="@drawable/button_primary_selector"
+        android:textColor="@android:color/white"
+        android:padding="10dp" />
+
+</LinearLayout>
