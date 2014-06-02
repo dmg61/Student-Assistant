@@ -106,6 +106,8 @@ public class MainActivity extends FragmentActivity {
 	private static EditText enterEr; // ошибка вычислений
 	private static TextView answer; // поле вывода ответа
 	private static TextView answerLable; // лэйб ответа
+	
+	private static long firstPress, secondPress;
 
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -136,6 +138,9 @@ public class MainActivity extends FragmentActivity {
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		mViewPager.setAdapter(mSectionsPagerAdapter);
 		mViewPager.setCurrentItem(1);
+		
+		firstPress  = 0;
+		secondPress = 0;
 	}
 
 	@Override
@@ -143,6 +148,23 @@ public class MainActivity extends FragmentActivity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
+	}
+	
+	@Override
+	public void onBackPressed()
+	{
+		secondPress = System.currentTimeMillis(); 
+		
+		if (firstPress != 0 && (secondPress - firstPress < 1000))
+		{
+			MainActivity.super.onBackPressed();
+		}
+		else
+		{
+			//mViewPager.setCurrentItem(1);
+			Toast.makeText(getApplication(), "Нажмите еще раз для выхода", Toast.LENGTH_SHORT).show();
+			firstPress = secondPress;
+		}
 	}
 
 	@Override
