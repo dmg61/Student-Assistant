@@ -161,7 +161,7 @@ public class MainActivity extends FragmentActivity {
 		}
 		else
 		{
-			//mViewPager.setCurrentItem(1);
+			mViewPager.setCurrentItem(1);
 			Toast.makeText(getApplication(), "Нажмите еще раз для выхода", Toast.LENGTH_SHORT).show();
 			firstPress = secondPress;
 		}
